@@ -61,10 +61,7 @@ public class SpecController {
 		
 		JSONObject resp = new JSONObject();
 		if(approval.equals("ok")){
-			htmlCOnvert.convertTOEmbedebleHtml(targetFile);
-			
-			
-			resp.put("status", "converted");	
+			resp.put("status", htmlCOnvert.convertTOEmbedebleHtml(targetFile));	
 		}else{
 			resp.put("status", "discardedJson");
 		}
